@@ -1,17 +1,10 @@
-# tf-re-id
+# Person Re-Identification in TensorFlow
 
-This is code for Deep Person Re-Identification with Improved Embedding. 
+This is code of the paper ["Deep Person Re-Identification with Improved Embedding"](https://arxiv.org/abs/1705.03332). 
 
-Five cnn architectures are implemented on three person re-identification datasets, including cuhk03, cuhk01 and viper.
+## Datasets
 
-Environment required:
-Ubuntu: 14.04
-Python: 2.7 or 3.5
-Tensorflow: 1.0.1
 
-Usage:
-Simply run the main.py file, specifying dataset, cnn architecture and random seed as arguments.
+## Train Model
 
-Images:
-The related data should be put in folder "images". The filename of the data is "re-id-dl-images.zip".
 
