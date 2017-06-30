@@ -3,10 +3,10 @@
 This is code of the paper ["Deep Person Re-Identification with Improved Embedding"](https://arxiv.org/abs/1705.03332). 
 
 ## Datasets
-- ["cuhk03"](http://www.ee.cuhk.edu.hk/~rzhao/) 
-- ["cuhk01"](http://www.ee.cuhk.edu.hk/~rzhao/)
-- ["viper"](https://vision.soe.ucsc.edu/node/178)
-- ["market1501"](http://www.liangzheng.org/Project/project_reid.html)(for pre-training, v15.09.15 is used in this paper)
+- [cuhk03](http://www.ee.cuhk.edu.hk/~rzhao/) 
+- [cuhk01](http://www.ee.cuhk.edu.hk/~rzhao/)
+- [viper](https://vision.soe.ucsc.edu/node/178)
+- [market1501](http://www.liangzheng.org/Project/project_reid.html)(for pre-training, v15.09.15 is used in this paper)
 
 ## Environment
 - Ubuntu or Windows
