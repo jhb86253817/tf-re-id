@@ -487,7 +487,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                     if step % 10 == 0:
                         print('Step %d, loss = %.3f' % (step, loss_value))
         print('start testing...')
-        # as for batch norm, it computes statistics from testing batches 
+        # as for batch norm, it computes statistics directly from testing batches 
         if cnn_structure == 'cnn-i':
             images_feed = data_test_a
             # labels does not matter

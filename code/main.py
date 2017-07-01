@@ -3,6 +3,9 @@ import sys
 import os
 
 if __name__ == '__main__':
+    # select which GPUs to use
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
     if len(sys.argv) < 2:
         print('Usage:')
         print('python main.py -Dataset -CnnStructure -Seed -RestoreModel(optional)')
