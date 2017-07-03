@@ -388,6 +388,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                 train_cs = optimizer.minimize(loss_cs, var_list=[w_fc1_cs], global_step=global_step)
                 # first stage of fine-tuning
                 # only update the parameters of the last softmax
+                print('Fine-tuning the last softmax...')
                 for step in range(7001):
                     images_a_feed, images_b_feed, labels_feed_vs, labels_feed_cs_a, labels_feed_cs_b = next_batch_ft_pair(data_ft_a, data_ft_b, batch_size, id_num)
                     feed_dict = {images_placeholder_a: images_a_feed,
@@ -401,6 +402,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                         print('Step %d, loss = %.3f' % (step, loss_cs_value))
                 # second stage of fine-tuning
                 # update all the parameters 
+                print('Fine-tuning the whole network...')
                 for step in range(101):
                     images_a_feed, images_b_feed, labels_feed_vs, labels_feed_cs_a, labels_feed_cs_b = next_batch_ft_pair(data_ft_a, data_ft_b, batch_size, id_num)
                     feed_dict = {images_placeholder_a: images_a_feed,
@@ -416,6 +418,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                 train_sm = optimizer.minimize(loss, var_list=[w_fc2], global_step=global_step)
                 # first stage of fine-tuning
                 # only update the parameters of the last softmax
+                print('Fine-tuning the last softmax...')
                 for step in range(7001):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     feed_dict = {images_placeholder: images_feed,
@@ -426,6 +429,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                         print('Step %d, loss = %.3f' % (step, loss_value))
                 # second stage of fine-tuning
                 # update all the parameters 
+                print('Fine-tuning the whole network...')
                 for step in range(101):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     feed_dict = {images_placeholder: images_feed,
@@ -438,6 +442,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                 train_sm = optimizer.minimize(loss, var_list=[w_fc2], global_step=global_step)
                 # first stage of fine-tuning
                 # only update the parameters of the last softmax
+                print('Fine-tuning the last softmax...')
                 for step in range(7001):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     labels_feed_stats = labels_statistics(labels_feed, batch_size)
@@ -450,6 +455,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                         print('Step %d, loss = %.3f' % (step, loss_value))
                 # second stage of fine-tuning
                 # update all the parameters 
+                print('Fine-tuning the whole network...')
                 for step in range(101):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     labels_feed_stats = labels_statistics(labels_feed, batch_size)
@@ -464,6 +470,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                 train_sm = optimizer.minimize(loss, var_list=[w_fc3], global_step=global_step)
                 # first stage of fine-tuning
                 # only update the parameters of the last softmax
+                print('Fine-tuning the last softmax...')
                 for step in range(7001):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     labels_feed_stats = labels_statistics(labels_feed, batch_size)
@@ -476,6 +483,7 @@ def train(dataset, cnn_structure, current_seed=1, max_steps=25000, learning_rate
                         print('Step %d, loss = %.3f' % (step, loss_value))
                 # second stage of fine-tuning
                 # update all the parameters 
+                print('Fine-tuning the whole network...')
                 for step in range(101):
                     images_feed, labels_feed = next_batch_ft_single(data_ft_a, data_ft_b, batch_size, id_num)
                     labels_feed_stats = labels_statistics(labels_feed, batch_size)
