@@ -3,7 +3,7 @@ import sys
 import os
 
 if __name__ == '__main__':
-    # select which GPUs to use
+    # select which GPU to use
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
     if len(sys.argv) < 2:
