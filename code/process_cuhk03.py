@@ -40,7 +40,7 @@ def trans(img_ori, range_h=6, range_w=2):
 
 def generate_cuhk03(cuhk03_file, current_seed):
     # 20 test set random splits from the original data
-    test_index_all = pickle.load(open('cuhk03_testsets', 'rb'))
+    test_index_all = pickle.load(open('../utils/cuhk03_testsets', 'rb'))
     test_index = []
     # x indicates the group of the data, y is the id
     for x,y in test_index_all[current_seed-1]:
